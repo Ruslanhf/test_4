@@ -11,101 +11,101 @@ driver.maximize_window()
 
 # Отображение страницы товара
 
-# driver.get("http://practice.automationtesting.in/")
-# driver.find_element_by_id("menu-item-50").click()
-# driver.find_element_by_id("username").send_keys("ironlolka1@mail.ru")
-# driver.find_element_by_id("password").send_keys("Strangelove2281!@#")
-# driver.find_element_by_name("login").click()
-# driver.find_element_by_id("menu-item-40").click()
-# driver.execute_script("window.scrollBy(0, 600);")
-# driver.find_element_by_class_name("post-181").click()
-# heading = driver.find_element_by_class_name("product_title")
-# heading_text = heading.text
-# assert heading_text == "HTML5 Forms"
-# print("Heading book - ", heading_text)
+driver.get("http://practice.automationtesting.in/")
+driver.find_element_by_id("menu-item-50").click()
+driver.find_element_by_id("username").send_keys("ironlolka1@mail.ru")
+driver.find_element_by_id("password").send_keys("Strangelove2281!@#")
+driver.find_element_by_name("login").click()
+driver.find_element_by_id("menu-item-40").click()
+driver.execute_script("window.scrollBy(0, 600);")
+driver.find_element_by_class_name("post-181").click()
+heading = driver.find_element_by_class_name("product_title")
+heading_text = heading.text
+assert heading_text == "HTML5 Forms"
+print("Heading book - ", heading_text)
 
 # Количество товаров в категории
 
-# driver.get("http://practice.automationtesting.in/")
-# driver.find_element_by_id("menu-item-50").click()
-# driver.find_element_by_id("username").send_keys("ironlolka1@mail.ru")
-# driver.find_element_by_id("password").send_keys("Strangelove2281!@#")
-# driver.find_element_by_name("login").click()
-# driver.find_element_by_id("menu-item-40").click()
-# driver.find_element_by_css_selector("aside>div>ul>li.cat-item-19>a").click()
-# html_count = driver.find_elements_by_css_selector("ul> .product")
-# number_html_count = len(html_count)
-# print("Количество товаров на странице -", number_html_count)
+driver.get("http://practice.automationtesting.in/")
+driver.find_element_by_id("menu-item-50").click()
+driver.find_element_by_id("username").send_keys("ironlolka1@mail.ru")
+driver.find_element_by_id("password").send_keys("Strangelove2281!@#")
+driver.find_element_by_name("login").click()
+driver.find_element_by_id("menu-item-40").click()
+driver.find_element_by_css_selector("aside>div>ul>li.cat-item-19>a").click()
+html_count = driver.find_elements_by_css_selector("ul> .product")
+number_html_count = len(html_count)
+print("Количество товаров на странице -", number_html_count)
 
 # Сортировка товаров
 
-# driver.get("http://practice.automationtesting.in/")
-# driver.find_element_by_id("menu-item-50").click()
-# driver.find_element_by_id("username").send_keys("ironlolka1@mail.ru")
-# driver.find_element_by_id("password").send_keys("Strangelove2281!@#")
-# driver.find_element_by_name("login").click()
-# driver.find_element_by_id("menu-item-40").click()
-# sort_default = driver.find_element_by_css_selector("[value='menu_order']")
-# sort_default_att = sort_default.get_attribute("selected")
-# sort_default_text = sort_default.text
-# assert "Default sorting" in sort_default_text
-# print("Выбрана сортировка по умолчанию -", sort_default_att)
-# sort_by = driver.find_element_by_class_name("orderby")
-# select = Select(sort_by)
-# select.select_by_value("price-desc")
-# sort_h = driver.find_element_by_css_selector("[value='price-desc']")
-# sort_h_att = sort_h.get_attribute("selected")
-# sort_ha_text = sort_h.text
-# assert "Sort by price: high to low" in sort_ha_text
-# print("Выбрана сортировка от большей к меньшей -", sort_h_att)
+driver.get("http://practice.automationtesting.in/")
+driver.find_element_by_id("menu-item-50").click()
+driver.find_element_by_id("username").send_keys("ironlolka1@mail.ru")
+driver.find_element_by_id("password").send_keys("Strangelove2281!@#")
+driver.find_element_by_name("login").click()
+driver.find_element_by_id("menu-item-40").click()
+sort_default = driver.find_element_by_css_selector("[value='menu_order']")
+sort_default_att = sort_default.get_attribute("selected")
+sort_default_text = sort_default.text
+assert "Default sorting" in sort_default_text
+print("Выбрана сортировка по умолчанию -", sort_default_att)
+sort_by = driver.find_element_by_class_name("orderby")
+select = Select(sort_by)
+select.select_by_value("price-desc")
+sort_h = driver.find_element_by_css_selector("[value='price-desc']")
+sort_h_att = sort_h.get_attribute("selected")
+sort_ha_text = sort_h.text
+assert "Sort by price: high to low" in sort_ha_text
+print("Выбрана сортировка от большей к меньшей -", sort_h_att)
 
 # Отображение, скидка товара
 
-# driver.get("http://practice.automationtesting.in/")
-# driver.find_element_by_id("menu-item-50").click()
-# driver.find_element_by_id("username").send_keys("ironlolka1@mail.ru")
-# driver.find_element_by_id("password").send_keys("Strangelove2281!@#")
-# driver.find_element_by_name("login").click()
-# driver.find_element_by_id("menu-item-40").click()
-# driver.execute_script("window.scrollBy(0, 600);")
-# driver.find_element_by_class_name("post-169").click()
-# old_price = driver.find_element_by_css_selector(".price>del>span")
-# old_price_text = old_price.text
-# new_price = driver.find_element_by_css_selector(".price>ins>span")
-# new_price_text = new_price.text
-# assert old_price_text == "₹600.00"
-# assert new_price_text == "₹450.00"
-# print("Старая цена -", old_price_text)
-# print("Новая цена -", new_price_text)
-# wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".images"))).click()
-# wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".pp_close"))).click()
+driver.get("http://practice.automationtesting.in/")
+driver.find_element_by_id("menu-item-50").click()
+driver.find_element_by_id("username").send_keys("ironlolka1@mail.ru")
+driver.find_element_by_id("password").send_keys("Strangelove2281!@#")
+driver.find_element_by_name("login").click()
+driver.find_element_by_id("menu-item-40").click()
+driver.execute_script("window.scrollBy(0, 600);")
+driver.find_element_by_class_name("post-169").click()
+old_price = driver.find_element_by_css_selector(".price>del>span")
+old_price_text = old_price.text
+new_price = driver.find_element_by_css_selector(".price>ins>span")
+new_price_text = new_price.text
+assert old_price_text == "₹600.00"
+assert new_price_text == "₹450.00"
+print("Старая цена -", old_price_text)
+print("Новая цена -", new_price_text)
+wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".images"))).click()
+wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".pp_close"))).click()
 
 # Првоерка цены в корзине
 
-# driver.get("http://practice.automationtesting.in/")
-# driver.find_element_by_id("menu-item-40").click()
-# driver.find_element_by_css_selector(".post-182 > .button").click()
-# wait.until(EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".cartcontents"), "1 Item"))
-# item = driver.find_element_by_css_selector(".cartcontents")
-# item_text = item.text
-# assert item_text == "1 Item"
-# print("Количество товаров в корзине -", item_text)
-# wait.until(EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".amount"), "₹180.00"))
-# price = driver.find_element_by_css_selector(".amount")
-# price_text = price.text
-# assert price_text == "₹180.00"
-# print("Стоимость товаров -", price_text)
-# driver.find_element_by_css_selector(".wpmenucart-contents").click()
-# wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".cart-subtotal")))
-# subtotal = driver.find_element_by_css_selector(".cart-subtotal")
-# subtotal_text = subtotal.text
-# assert subtotal_text is not None
-# print("Стоимость отобразилась -", subtotal_text)
-# wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".order-total")))
-# total = driver.find_element_by_css_selector(".order-total")
-# total_text = total.text
-# assert total_text is not None
-# print("Стоимость отобразилась -", total_text)
+driver.get("http://practice.automationtesting.in/")
+driver.find_element_by_id("menu-item-40").click()
+driver.find_element_by_css_selector(".post-182 > .button").click()
+wait.until(EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".cartcontents"), "1 Item"))
+item = driver.find_element_by_css_selector(".cartcontents")
+item_text = item.text
+assert item_text == "1 Item"
+print("Количество товаров в корзине -", item_text)
+wait.until(EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".amount"), "₹180.00"))
+price = driver.find_element_by_css_selector(".amount")
+price_text = price.text
+assert price_text == "₹180.00"
+print("Стоимость товаров -", price_text)
+driver.find_element_by_css_selector(".wpmenucart-contents").click()
+wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".cart-subtotal")))
+subtotal = driver.find_element_by_css_selector(".cart-subtotal")
+subtotal_text = subtotal.text
+assert subtotal_text is not None
+print("Стоимость отобразилась -", subtotal_text)
+wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, ".order-total")))
+total = driver.find_element_by_css_selector(".order-total")
+total_text = total.text
+assert total_text is not None
+print("Стоимость отобразилась -", total_text)
 
 
 # Работа в корзине
